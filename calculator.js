@@ -59,11 +59,11 @@ const storagePrefix = `${year}_${semester}_`;
 modules.forEach((m, i) => {
     tbody.innerHTML += `
     <tr>
-        <td>${m.name}</td>
-        <td>${m.coef}</td>
-        <td><input type="number" min="0" max="20" step="0.01" id="cc${i}" ${m.examOnly ? 'disabled' : ''}></td>
-        <td><input type="number" min="0" max="20" step="0.01" id="exam${i}"></td>
-        <td id="avg${i}">--</td>
+        <td data-label="Module">${m.name}</td>
+        <td data-label="Coef">${m.coef}</td>
+        <td data-label="CC"><input type="number" min="0" max="20" step="0.01" id="cc${i}" ${m.examOnly ? 'disabled' : ''}></td>
+        <td data-label="Exam"><input type="number" min="0" max="20" step="0.01" id="exam${i}"></td>
+        <td data-label="Average" id="avg${i}">--</td>
     </tr>
     `;
 });
