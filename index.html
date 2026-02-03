@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GradeLab Pro - Grade Calculator for Computer Science Students">
+    <title>GradeLab Pro - CS Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="landing-header">
+        <h1>🎓 GradeLab Pro</h1>
+        <p class="subtitle">Grade Calculator for Computer Science Students</p>
+    </div>
+
+    <div class="card selection-card">
+        
+        <h2>Select Your Academic Year</h2>
+        
+        <div class="year-selection">
+            <button class="year-btn disabled" disabled>
+                <span class="year-label">L1</span>
+                <span class="status-badge">Coming Soon</span>
+            </button>
+            
+            <button class="year-btn disabled" disabled>
+                <span class="year-label">L2</span>
+                <span class="status-badge">Coming Soon</span>
+            </button>
+            
+            <button class="year-btn active" onclick="selectYear('L3')">
+                <span class="year-label">L3</span>
+                <span class="status-badge available">Available</span>
+            </button>
+        </div>
+
+        <div id="semester-section" class="semester-section hidden">
+            <h2>Select Semester</h2>
+            
+            <div class="semester-selection">
+                <button class="semester-btn" onclick="goToCalculator('L3', 'S1')">
+                    <span class="semester-icon">📚</span>
+                    <span class="semester-label">Semester 1</span>
+                </button>
+                
+                <button class="semester-btn" onclick="goToCalculator('L3', 'S2')">
+                    <span class="semester-icon">📚</span>
+                    <span class="semester-label">Semester 2</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="landing-footer">
+        <p>Made with ❤️ by student, for students</p>
+    </footer>
+
+</div>
+
+<script src="landing.js"></script>
+
+</body>
+</html>

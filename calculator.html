@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GradeLab Pro - Calculate your grades">
+    <title>GradeLab Pro - Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            <div>
+                <h1 id="page-title">🎓 GradeLab Pro</h1>
+                <p class="page-subtitle" id="page-subtitle"></p>
+            </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="card">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Module</th>
+                    <th>Coef</th>
+                    <th>
+                        <div class="input-header">CC</div>
+                    </th>
+                    <th>
+                        <div class="input-header">Exam</div>
+                    </th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody"></tbody>
+
+        </table>
+
+    </div>
+
+    <div id="final" class="final">
+        Final Grade — --
+    </div>
+
+</div>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>
