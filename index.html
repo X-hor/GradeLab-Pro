@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GradeLab Pro - Grade Calculator for Computer Science Students">
-    <title>GradeLab Pro - CS Grade Calculator</title>
+    <meta name="description" content="GradeLab Pro - Grade Calculator for CS Students">
+    <title>GradeLab Pro - Grade Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,7 +14,7 @@
 
     <div class="landing-header">
         <h1>🎓 GradeLab Pro</h1>
-        <p class="subtitle">Grade Calculator for Computer Science Students</p>
+        <p class="subtitle">Grade Calculator for CS Students</p>
     </div>
 
     <div class="card selection-card">
@@ -22,9 +22,9 @@
         <h2>Select Your Academic Year</h2>
         
         <div class="year-selection">
-            <button class="year-btn disabled" disabled>
+            <button class="year-btn active" onclick="selectYear('L1', this)">
                 <span class="year-label">L1</span>
-                <span class="status-badge">Coming Soon</span>
+                <span class="status-badge available">Available</span>
             </button>
             
             <button class="year-btn disabled" disabled>
@@ -32,7 +32,7 @@
                 <span class="status-badge">Coming Soon</span>
             </button>
             
-            <button class="year-btn active" onclick="selectYear('L3')">
+            <button class="year-btn active" onclick="selectYear('L3', this)">
                 <span class="year-label">L3</span>
                 <span class="status-badge available">Available</span>
             </button>

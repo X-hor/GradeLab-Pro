@@ -3,6 +3,26 @@
 ===================== */
 
 const modulesData = {
+    L1: {
+        S1: [
+            {name:"Algorithms 1", coef:5, examOnly:false},
+            {name:"Machine Structure 1", coef:3, examOnly:false},
+            {name:"Free Software", coef:1, examOnly:false},
+            {name:"Analyse 1", coef:4, examOnly:false},
+            {name:"Algebre 1", coef:2, examOnly:false},
+            {name:"Electricity", coef:2, examOnly:false},
+            {name:"English", coef:1, examOnly:false}
+        ],
+        S2: [
+            {name:"Algorithms 2", coef:5, examOnly:false},
+            {name:"Machine Structure 2", coef:3, examOnly:false},
+            {name:"Introduction to AI", coef:1, examOnly:false},
+            {name:"Analyse 2", coef:4, examOnly:false},
+            {name:"Algebre 2", coef:2, examOnly:false},
+            {name:"Logic", coef:1, examOnly:false},
+            {name:"Electronique", coef:2, examOnly:false}
+        ]
+    },
     L3: {
         S1: [
             {name:"Operating Systems 2", coef:3, examOnly:false},
@@ -14,13 +34,13 @@ const modulesData = {
             {name:"Digital Economy", coef:1, examOnly:true}
         ],
         S2: [
-            {name:"Networks", coef:3, examOnly:false},
-            {name:"Database 2", coef:3, examOnly:false},
-            {name:"Web Development", coef:3, examOnly:false},
-            {name:"AI Fundamentals", coef:3, examOnly:false},
-            {name:"Statistics", coef:2, examOnly:false},
-            {name:"Computer Architecture", coef:2, examOnly:false},
-            {name:"Professional English", coef:1, examOnly:true}
+            {name:"Mobile Applications", coef:3, examOnly:false},
+            {name:"Computer Security", coef:3, examOnly:false},
+            {name:"Artificial Intelligence", coef:3, examOnly:false},
+            {name:"Semi-Structured Data", coef:3, examOnly:false},
+            {name:"Project", coef:2, examOnly:false},
+            {name:"Scientific Writing", coef:1, examOnly:false},
+            {name:"Creating and Developing a Startup", coef:2, examOnly:true}
         ]
     }
 };
@@ -32,8 +52,8 @@ const modulesData = {
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
     return {
-        year: params.get('year') || 'L3',
-        semester: params.get('semester') || 'S1'
+        year: params.get('year'),
+        semester: params.get('semester')
     };
 }
 
@@ -59,11 +79,11 @@ const storagePrefix = `${year}_${semester}_`;
 modules.forEach((m, i) => {
     tbody.innerHTML += `
     <tr>
-        <td data-label="Module">${m.name}</td>
-        <td data-label="Coef">${m.coef}</td>
-        <td data-label="CC"><input type="number" min="0" max="20" step="0.01" id="cc${i}" ${m.examOnly ? 'disabled' : ''}></td>
-        <td data-label="Exam"><input type="number" min="0" max="20" step="0.01" id="exam${i}"></td>
-        <td data-label="Average" id="avg${i}">--</td>
+        <td>${m.name}</td>
+        <td>${m.coef}</td>
+        <td><input type="number" min="0" max="20" step="0.01" id="cc${i}" ${m.examOnly ? 'disabled' : ''}></td>
+        <td><input type="number" min="0" max="20" step="0.01" id="exam${i}"></td>
+        <td id="avg${i}">--</td>
     </tr>
     `;
 });
@@ -143,12 +163,12 @@ function toggleTheme() {
     if (body.classList.contains('light')) {
         // Switch to dark
         body.classList.remove('light');
-        themeIcon.textContent = '☀️';
+        themeIcon.textContent = '🌙';
         localStorage.setItem("theme", "dark");
     } else {
         // Switch to light
         body.classList.add('light');
-        themeIcon.textContent = '🌙';
+        themeIcon.textContent = '☀️';
         localStorage.setItem("theme", "light");
     }
 }
@@ -159,9 +179,9 @@ function setTheme(mode){
 
     if(mode === "light") {
         document.body.classList.add("light");
-        if(themeIcon) themeIcon.textContent = '🌙';
-    } else {
         if(themeIcon) themeIcon.textContent = '☀️';
+    } else {
+        if(themeIcon) themeIcon.textContent = '🌙';
     }
 
     localStorage.setItem("theme", mode);

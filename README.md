@@ -17,7 +17,7 @@ A modern grade calculator web application designed specifically for **Computer S
 
 ## 🚀 Live Demo
 
-[Live Demo](#) *(Add your GitHub Pages link here after deployment)*
+[Live Demo](#) *(https://x-hor.github.io/GradeLab-Pro/)*
 
 ## 🎯 Currently Available
 
@@ -40,8 +40,26 @@ A modern grade calculator web application designed specifically for **Computer S
 - Scientific Writing
 - Creating and Developing a Startup
 
+### L1 (First Year)
+#### Semester 1
+- General Electricity
+- Algorithms and Data Structures 1
+- Machine structure 1
+- Algebre 1
+- Analyse 1
+- Free Software
+- English 
+
+#### Semester 2
+- Analyse 2
+- Algebre 2
+- Machine structure 2
+- Algorithms and Data Structures 2
+- Introduction to Ai
+- Logique mathimatique
+- Electronique fondamentale 
+
 ### Coming Soon
-- **L1** (First Year) - Both semesters
 - **L2** (Second Year) - Both semesters
 
 ## 📋 How It Works
@@ -214,7 +232,7 @@ Fully responsive design optimized for:
 ## 🚀 Roadmap
 
 - [x] L3 Semester 1 & 2
-- [ ] L1 Semester 1 & 2
+- [x] L1 Semester 1 & 2
 - [ ] L2 Semester 1 & 2
 - [ ] Export grades to PDF
 - [ ] Grade statistics and charts
@@ -235,4 +253,4 @@ Give a ⭐️ if this project helped you track your grades!
 
 ---
 
-**Made with ❤️ by CS student, for students**
+**Made with ❤️ by student, for students**
